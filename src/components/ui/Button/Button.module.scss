@@ -1,0 +1,88 @@
+@use '../../../styles/variables' as vars;
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-variant-1 {
+  background-color: transparent;
+  color: vars.$white-lilac;
+  padding: 7px 12px;
+  font-size: 12px;
+  line-height: 18px;
+  border: 2px solid vars.$blackcurrant;
+
+  &:hover {
+    background-color: vars.$charade;
+    cursor: pointer;
+  }
+}
+
+.btn-variant-2 {
+  background-color: vars.$corn-flower-blue;
+  color: vars.$white;
+  padding: 10px 34px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.btn-variant-3 {
+  background-color: vars.$bastille;
+  color: vars.$white-lilac;
+  padding: 12px 34px;
+  border: 2px solid vars.$blackcurrant;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.btn-variant-4 {
+  background: none;
+  color: vars.$waterloo;
+  font-size: 14px;
+  line-height: 21px;
+
+  &:hover {
+    color: vars.$titan-white;
+  }
+}
+
+.btn-variant-5 {
+  background-color: vars.$blackcurrant;
+  color: vars.$white-lilac;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 9px 15px;
+  font-weight: 400;
+  letter-spacing: 0.48;
+}
+
+.btn-wrapper {
+  display: inline-flex;
+  gap: 0;
+  align-self: center;
+
+  & .btn {
+    border-radius: 0px;
+
+    &:first-of-type {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+}

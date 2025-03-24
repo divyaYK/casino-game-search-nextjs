@@ -1,0 +1,13 @@
+@use "../../../styles/variables" as vars;
+
+.input {
+  border: none;
+  font-size: 13px;
+  background-color: transparent;
+  width: 100%;
+  color: vars.$waterloo;
+
+  &::placeholder {
+    color: vars.$waterloo;
+  }
+}

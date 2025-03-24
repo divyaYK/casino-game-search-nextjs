@@ -1,0 +1,42 @@
+/*
+  0 - 600px       Mobile Phone
+  600 - 900px     Tablet
+  900 - 1200px    Small Desktop / Tablet Landscape
+  1200px - 1800px   Large Desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab {
+    @media (min-width: 600px) and (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == small-desktop {
+    @media (min-width: 900px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == large-desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin wrapper {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @include respond(phone) {
+    padding-inline: 18px;
+  }
+}

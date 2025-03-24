@@ -1,0 +1,32 @@
+@use '../../styles/variables' as vars;
+
+.error {
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+
+    & svg {
+      width: 2rem;
+      height: 2rem;
+      fill: vars.$white-lilac;
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}

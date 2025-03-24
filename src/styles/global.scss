@@ -1,0 +1,61 @@
+@use './_variables' as vars;
+@use './_mixins' as mixins;
+
+*,
+html,
+body,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 400;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  background-color: vars.$baltic-sea;
+  color: vars.$white-lilac;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  background: transparent;
+}
+
+@include mixins.respond(phone) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+a:hover,
+a:focus {
+  outline: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+button:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid vars.$white-lilac;
+  outline-offset: 2px;
+}
