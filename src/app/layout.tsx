@@ -28,8 +28,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className} suppressHydrationWarning>
         <ErrorBoundary>
+          {/* Zustand Providers */}
           <FavoritesStoreProvider>
             <FilterStoreProvider>
+              {/* React Query Provider */}
               <RQProvider>
                 <Navbar />
                 {children}

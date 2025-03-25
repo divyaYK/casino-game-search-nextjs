@@ -9,6 +9,8 @@ interface IFilterProps {
   label: string;
   value: string;
 }
+
+// Component utilizes zustand to set or remove the filter
 const Filter = ({ label, value }: IFilterProps) => {
   const { filterStr, setFilterStr, setIsFilterSet } = useFilterStore(
     (state) => state

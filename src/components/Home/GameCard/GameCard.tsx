@@ -14,6 +14,11 @@ interface IGameCardProps {
   game: ICasinoGame;
 }
 
+/**
+ * @name GameCard
+ * @description The GameCard component is responsible for rendering a single game card;
+ * Added Heart Button to favorite the games, redirects to game details page on click
+ */
 const GameCard = ({ game }: IGameCardProps) => {
   const { favorites, addGame, removeGame } = useFavoritesStore(
     (state) => state

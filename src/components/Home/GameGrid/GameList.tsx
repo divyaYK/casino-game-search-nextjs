@@ -8,6 +8,7 @@ import GameShowIcon from '@/components/ui/icons/GameShowIcon';
 import SportsIcon from '@/components/ui/icons/SportsIcon';
 import NewIcon from '@/components/ui/icons/NewIcon';
 import GameListItem from './GameListItem';
+import ProvidersGrid from '../ProvidersGrid/ProvidersGrid';
 
 const GameListConstants = [
   {
@@ -52,6 +53,10 @@ const GameListConstants = [
   },
 ];
 
+/**
+ * @name GameList
+ * @description Responsible for loading different game grids depending on the filter
+ */
 const GameList = () => {
   return (
     <section>
@@ -64,7 +69,11 @@ const GameList = () => {
             filter={gameType.filter}
           />
         ) : (
-          <div key={uuid()}>Providers Grid</div>
+          <ProvidersGrid
+            key={uuid()}
+            label={gameType.label}
+            icon={gameType.icon}
+          />
         );
       })}
     </section>

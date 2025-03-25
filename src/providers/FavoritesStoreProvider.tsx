@@ -4,6 +4,10 @@ import { FavoritesStore, favoritesStore } from '@/store/favoritesStore';
 import { createContext, ReactNode, useContext, useRef } from 'react';
 import { useStore } from 'zustand';
 
+/**
+ * Favorites store that stores favorite games list in local storage
+ */
+
 export type FavoritesStoreAPI = ReturnType<typeof favoritesStore>;
 
 export const FavoritesStoreContext = createContext<

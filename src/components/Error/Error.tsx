@@ -1,6 +1,7 @@
 import WarningIcon from '../ui/icons/WarningIcon';
 import styles from './Error.module.scss';
 
+// Component to display if API calls fail
 const ErrorComponent = () => {
   return (
     <div className={styles.error__wrapper}>

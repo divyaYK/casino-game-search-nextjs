@@ -7,6 +7,10 @@ import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react';
 import debounce from 'lodash.debounce';
 import SearchIcon from '@/components/ui/icons/SearchIcon';
 
+/**
+ * @name SearchInput
+ * @description Search bar with debounce timeout that allows real time search results
+ */
 const SearchInput = () => {
   const {
     setSearchStr,

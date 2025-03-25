@@ -10,6 +10,10 @@ interface IGetGameResponse {
   };
 }
 
+/**
+ * @description Fetches the games based on the specified filter; throws an error if the filter is not specified.
+ * @returns games API response
+ */
 export const getGames = async (
   filter: string,
   limit: number = 10,

@@ -4,6 +4,10 @@ import { FilterStore, filterStore } from '@/store/filterStore';
 import { createContext, ReactNode, useContext, useRef } from 'react';
 import { useStore } from 'zustand';
 
+/**
+ * Filter store that handles CRUD operations on filters.
+ */
+
 export type FilterStoreAPI = ReturnType<typeof filterStore>;
 
 export const FilterStoreContext = createContext<FilterStoreAPI | undefined>(

@@ -14,6 +14,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const searchInputRef = useFilterStore((state) => state.searchInputRef);
 
+  // Assuming the purpose is the same searching games, it focuses on the search bar in the home page
   const handleSearchClick = () => {
     if (pathname === '/' && searchInputRef?.current) {
       searchInputRef.current.focus();

@@ -1,6 +1,9 @@
 import { DetailedHTMLProps, forwardRef, HTMLAttributes } from 'react';
 import styles from './Button.module.scss';
 
+/**
+ * @description Created to wrap the Split Button type button group
+ */
 const ButtonGroup = forwardRef<
   HTMLDivElement,
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>

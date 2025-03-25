@@ -3,6 +3,9 @@
 import { forwardRef } from 'react';
 import styles from './Input.module.scss';
 
+/**
+ * @description Reusable Input Component with styles that serve search bar
+ */
 const Input = forwardRef<
   HTMLInputElement,
   React.InputHTMLAttributes<HTMLInputElement>

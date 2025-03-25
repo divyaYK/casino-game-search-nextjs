@@ -8,6 +8,10 @@ interface ISearchGamesResponse {
   };
 }
 
+/**
+ * @description Fetches the games based on the specified query; throws an error if the query is not specified.
+ * @returns search API response
+ */
 export const searchGames = async (
   query: string
 ): Promise<ISearchGamesResponse> => {

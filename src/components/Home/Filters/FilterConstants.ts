@@ -1,3 +1,4 @@
+// Value strings inferred from the API documentation provided
 export const FilterConstants = [
   {
     label: 'Jackpot Originals',
@@ -9,22 +10,22 @@ export const FilterConstants = [
   },
   {
     label: 'Slots',
-    value: 'category=VIDEOSLOTS',
+    value: 'category=VIDEOSLOTS', // games not found
   },
   {
     label: 'Featured Games',
-    value: 'sort=featuredPriority',
+    value: 'sort=featuredPriority', // returns featured: false
   },
   {
     label: 'Live Dealer',
-    value: 'category=GAMESHOWSLIVEDEALER',
+    value: 'category=GAMESHOWSLIVEDEALER', // games not found
   },
   {
     label: 'Game Shows',
-    value: 'category=GAMESHOWSLIVEDEALER',
+    value: 'category=GAMESHOWSLIVEDEALER', // games not found
   },
   {
     label: 'Table Games',
-    value: 'category=TABLEGAMES',
+    value: 'category=TABLEGAMES', // games not found
   },
 ];

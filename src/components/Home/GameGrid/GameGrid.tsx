@@ -21,8 +21,13 @@ interface IGameGridProps {
   viewFullList: boolean;
 }
 
+// Scroll width amount to scroll forwards and backwards
 const CUSTOM_SCROLL_AMOUNT = 6 * 200;
 
+/**
+ * @name GameGrid
+ * @description Handles Infinite Scrolling (Pagination) with game list div to scroll over
+ */
 const GameGrid = ({ label, icon, filter, viewFullList }: IGameGridProps) => {
   const {
     data,
@@ -50,6 +55,7 @@ const GameGrid = ({ label, icon, filter, viewFullList }: IGameGridProps) => {
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [viewAll, setViewAll] = useState(viewFullList);
 
+  // TODO: Fix left side scrolling and disabling
   const handleScroll = (direction: 'left' | 'right') => {
     if (!scrollRef.current) {
       return;

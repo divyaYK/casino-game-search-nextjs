@@ -7,6 +7,9 @@ interface ICasinoButtonProps {
   variant: '1' | '2' | '3' | '4' | '5';
 }
 
+/**
+ * @description Reusable Button Component with variants inferred from the figma design
+ */
 const Button = forwardRef<
   HTMLButtonElement,
   ButtonHTMLAttributes<HTMLButtonElement> & ICasinoButtonProps

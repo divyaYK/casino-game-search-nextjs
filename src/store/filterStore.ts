@@ -1,3 +1,7 @@
+/**
+ * File defines the global client-side state management setup using zustand
+ */
+
 import { RefObject } from 'react';
 import { createStore } from 'zustand/vanilla';
 
@@ -7,6 +11,7 @@ type FilterState = {
   searchInputRef: RefObject<HTMLInputElement | null> | undefined;
   isFilterSet: boolean;
   isSearchQuerySet: boolean;
+  isProviderSet: boolean;
 };
 
 type FilterActions = {
@@ -15,6 +20,7 @@ type FilterActions = {
   setSearchInputRef: (ref: RefObject<HTMLInputElement | null>) => void;
   setIsFilterSet: (isFilterSet: boolean) => void;
   setIsSearchQuerySet: (isSearchQuerySet: boolean) => void;
+  setIsProviderSet: (isProviderSet: boolean) => void;
 };
 
 export type FilterStore = FilterState & FilterActions;
@@ -25,6 +31,7 @@ const defaultInitialState: FilterState = {
   searchInputRef: undefined,
   isFilterSet: false,
   isSearchQuerySet: false,
+  isProviderSet: false,
 };
 
 export const filterStore = (
@@ -39,5 +46,6 @@ export const filterStore = (
     },
     setIsFilterSet: (isFilterSet) => set({ isFilterSet }),
     setIsSearchQuerySet: (isSearchQuerySet) => set({ isSearchQuerySet }),
+    setIsProviderSet: (isProviderSet) => set({ isProviderSet }),
   }));
 };

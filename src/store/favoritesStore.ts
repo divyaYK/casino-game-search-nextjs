@@ -1,3 +1,7 @@
+/**
+ * File defines the persisted storage setup using zustand
+ */
+
 import { createJSONStorage, persist } from 'zustand/middleware';
 import { createStore } from 'zustand/vanilla';
 

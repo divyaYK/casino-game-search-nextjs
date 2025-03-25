@@ -1,3 +1,7 @@
+/**
+ * File defines the Server-side query client setup for react-query
+ */
+
 import {
   defaultShouldDehydrateQuery,
   isServer,
