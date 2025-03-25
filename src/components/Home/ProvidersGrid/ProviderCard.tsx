@@ -45,6 +45,7 @@ const ProviderCard = ({ name, filter, imgSrc }: IProviderCardProps) => {
         title={name}
         className={`${styles['provider-card__wrapper']} ${isActive ? styles.active : ''}`}
         onClick={handleClick}
+        suppressHydrationWarning
       >
         <Image src={imgSrc} alt={name} width={160} height={100} />
       </button>
